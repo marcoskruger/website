@@ -1,0 +1,12 @@
+<div style="height: 305px">
+    <carousel interval="5000">
+        <slide ng-repeat="product in producties" | async active="product.active">
+            <br>
+            <br>
+            <img ng-src="{{product.img}}" style="margin:auto;">
+            <div class="carousel-caption">
+
+            </div>
+        </slide>
+    </carousel>
+</div>

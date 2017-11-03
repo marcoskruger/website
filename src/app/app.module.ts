@@ -1,14 +1,24 @@
+import { AngularFirestore } from 'angularfire2/firestore';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { FirebaseConfig } from './../environments/firebase.config';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { GalleryProductComponent } from './gallery-product/gallery-product.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GalleryProductComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFireModule.initializeApp(FirebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
