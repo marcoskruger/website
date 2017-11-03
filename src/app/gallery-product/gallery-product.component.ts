@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Product } from './../models/product';
-import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -11,7 +10,6 @@ import { Observable } from 'rxjs/Observable';
 })
 export class GalleryProductComponent implements OnInit {
 
-  constructor() { }
   producties: Array<Product> = new Array<Product>();
 
   constructor(private db: AngularFireDatabase) {
