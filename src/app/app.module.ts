@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { GalleryProductComponent } from './gallery-product/gallery-product.component';
 
 import { FirebaseConfig } from './../environments/firebase.config';
 import { AngularFireModule } from 'angularfire2';
