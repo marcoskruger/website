@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: rgba(202, 202, 202, 0.86) !important;
+    background: rgba(202, 202, 202, 0.86) !important;
+    opacity: 1 !important;
+}

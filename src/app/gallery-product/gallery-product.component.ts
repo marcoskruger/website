@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class GalleryProductComponent implements OnInit {
 
-  producties: Array<Product> = new Array<Product>();
+  public producties: Array<Product> = new Array<Product>();
 
   constructor(private db: AngularFireDatabase) {
     const productList = db.list('product').valueChanges();
@@ -22,6 +22,10 @@ export class GalleryProductComponent implements OnInit {
           }
         });
     });
+  }
+
+  isActive(product: Product) {
+    return product === this.producties[0];
   }
 
   ngOnInit() {
