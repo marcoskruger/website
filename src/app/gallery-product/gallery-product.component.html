@@ -1,3 +1,13 @@
+<script>
+    $(document).ready(function() {
+        $("#myCarousel").swiperight(function() {
+            $("#myCarousel").carousel('prev');
+        });
+        $("#myCarousel").swipeleft(function() {
+            $("#myCarousel").carousel('next');
+        });
+    });
+</script>
 <div class="background-master">
     <div class="div-logo">
         <img class="img-center" src="assets/img/logo.png">
@@ -13,8 +23,6 @@
                     <div>
                     </div>
                 </div>
-
-
             </div>
             <!--
 <div id="myCarousel " class="carousel slide " data-ride="carousel ">
