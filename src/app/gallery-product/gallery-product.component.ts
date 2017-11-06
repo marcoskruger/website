@@ -31,6 +31,9 @@ export class GalleryProductComponent implements OnInit {
     return product === this.producties[0];
   }
 
+  teste() {
+    alert('1');
+  }
   ngOnInit() {
   }
 
