@@ -11,14 +11,17 @@ import { Observable } from 'rxjs/Observable';
 export class GalleryProductComponent implements OnInit {
 
   public producties: Array<Product> = new Array<Product>();
+  public loading = false;
 
   constructor(private db: AngularFireDatabase) {
     const productList = db.list('product').valueChanges();
+    this.loading = true;
 
     productList.subscribe(data => {
         data.forEach((product: Product) => {
           if (product.inactive === false || product.inactive === undefined) {
               this.producties.push(product);
+              this.loading  = false;
           }
         });
     });

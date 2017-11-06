@@ -1,7 +1,7 @@
 import { AngularFirestore } from 'angularfire2/firestore';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { LoadingModule } from 'ngx-loading';
 import { AppComponent } from './app.component';
 
 import { FirebaseConfig } from './../environments/firebase.config';
@@ -18,7 +18,8 @@ import { GalleryProductComponent } from './gallery-product/gallery-product.compo
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(FirebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    LoadingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

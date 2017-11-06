@@ -3,6 +3,7 @@
         <img class="img-center" src="assets/img/logo.png">
     </div>
     <br/>
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
     <div id="#myCarousel" class="div-carousel carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="item" *ngFor="let product of producties; index as i; first as isFirst" [ngClass]="{active: isActive(product)}">
