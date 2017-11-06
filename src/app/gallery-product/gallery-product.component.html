@@ -1,20 +1,10 @@
-<script>
-    $(document).ready(function() {
-        $("#myCarousel").swiperight(function() {
-            $("#myCarousel").carousel('prev');
-        });
-        $("#myCarousel").swipeleft(function() {
-            $("#myCarousel").carousel('next');
-        });
-    });
-</script>
 <div class="background-master">
     <div class="div-logo">
         <img class="img-center" src="assets/img/logo.png">
     </div>
     <br/>
     <div id="#myCarousel" class="div-carousel carousel slide" data-ride="carousel">
-        <div class="carousel-inner ">
+        <div class="carousel-inner">
             <div class="item" *ngFor="let product of producties; index as i; first as isFirst" [ngClass]="{active: isActive(product)}">
                 <img class="img-carousel" src={{product.img}} alt="">
                 <div style="text-align: center;">
@@ -24,30 +14,6 @@
                     </div>
                 </div>
             </div>
-            <!--
-<div id="myCarousel " class="carousel slide " data-ride="carousel ">
-
-<ol class="carousel-indicators ">
-    <li data-target="#myCarousel " data-slide-to="0 " class="active "></li>
-    <li data-target="#myCarousel " data-slide-to="1 "></li>
-    <li data-target="#myCarousel " data-slide-to="2 "></li>
-</ol>
-
-<div class="carousel-inner ">
-    <div class="item active ">
-        <img src="https://firebasestorage.googleapis.com/v0/b/produtos-5abd3.appspot.com/o/product%2FP_20170930_224149_HDR.jpg?alt=media&token=8e95a3e4-a0e7-485d-ab8d-f6100a2045aa ">
-    </div>
-
-    <div class="item ">
-        <img src="https://firebasestorage.googleapis.com/v0/b/produtos-5abd3.appspot.com/o/product%2FP_20170930_211238_HDR.jpg?alt=media&token=070e0cdf-f080-414f-87a1-4c28640193ae ">
-    </div>
-
-    <div class="item ">
-        <img src="https://firebasestorage.googleapis.com/v0/b/produtos-5abd3.appspot.com/o/product%2FP_20170930_204847_HDR.jpg?alt=media&token=3967fedb-dc05-4fd4-aaca-aa9b11d4b87c ">
+        </div>
     </div>
 </div>
-
-
-</div> -->
-
-        </div>
