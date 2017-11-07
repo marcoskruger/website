@@ -22,6 +22,7 @@ export class GalleryProductComponent implements OnInit {
           if (product.inactive === false || product.inactive === undefined) {
               this.producties.push(product);
               this.loading  = false;
+              document.getElementById('myCarousel').setAttribute('data-interval', '20');
           }
         });
     });
@@ -31,9 +32,6 @@ export class GalleryProductComponent implements OnInit {
     return product === this.producties[0];
   }
 
-  teste() {
-    alert('1');
-  }
   ngOnInit() {
   }
 
